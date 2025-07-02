@@ -20,10 +20,9 @@ The goal is to explore various aspects of F1 history and performance using real-
 
 ## Key Questions Explored
 
-1. How has the number of races per season evolved over time? [Evolution of F1 Race Counts per Season]()
-2. Which circuits have hosted the most races?
-3. Which drivers raced for the most teams during their careers?
-4. Which circuits have the best or worst pole-to-win conversion rate?
+1. How has the number of races per season evolved over time? See results here: [Evolution of F1 Race Counts per Season](images/race_counts_year_graph.png)
+3. Which drivers raced for the most teams during their careers? 
+4. Which circuits have the best or worst pole-to-win conversion rate? 
 
 
 ! [Pit Stop Trend By Circuit](images/pit_stop_trend_by_circuit.png)

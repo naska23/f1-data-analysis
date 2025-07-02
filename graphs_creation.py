@@ -46,6 +46,8 @@ def create_race_count_graph(df):
     plt.tight_layout()
     plt.savefig('/Users/oblj-nkvarantan/PycharmProjects/F1 DATA/race_counts_year_graph.png', dpi=300)
     print("Trend plot saved.")
+    #plt.savefig('images/race_counts_year_graph.png')
+    #print("Saved to images folder")
     plt.show()
 
 
