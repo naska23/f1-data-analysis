@@ -50,14 +50,47 @@ def create_race_count_graph(df):
     #print("Saved to images folder")
     plt.show()
 
+def create_pole_to_win_graph(df1):
+    # Filter for top 10 conversion ranks
+    df_top10 = df1[(df1['conversion_rank'] >= 1) & (df1['conversion_rank'] <= 10)]
+
+    # select data
+    grand_prix_name = df_top10['name']
+    conversion = df_top10['conversion_percentage']
+
+    # create bar chart
+    plt.figure(figsize=(10, 6), facecolor='black')
+    ax = plt.gca()
+    ax.set_facecolor('black')
+    plt.barh(grand_prix_name, conversion, color='#FF46A2')
+
+
+    plt.xlabel('Pole-to-Win Conversion Percentage', fontsize=14, fontweight='bold', color='white')
+    plt.ylabel('Circuit', fontsize=14, fontweight='bold', color='white')
+    plt.title('Top 10 Circuits by Pole-to-Win Conversion Rate', fontsize=20, fontweight='bold', color='white')
+
+    # set ticks color to white
+    ax.tick_params(axis='x', colors='white', labelsize=12, width=2, length=6)
+    ax.tick_params(axis='y', colors='white', labelsize=12, width=2, length=6)
+
+    # make tick labels bold
+    for label in ax.get_xticklabels() + ax.get_yticklabels() :
+        label.set_fontweight('bold')
+
+    plt.gca().invert_yaxis()  # Highest conversion at top
+    plt.tight_layout()
+    plt.show()
+
 
 def main():
     # load the race_counts_by_year.csv file
     df = pd.read_csv('/Users/oblj-nkvarantan/PycharmProjects/F1 DATA/race_counts_by_year.csv')
 
-    # create plot
-    create_race_count_graph(df)
+    df1 = pd.read_csv('/Users/oblj-nkvarantan/PycharmProjects/F1 DATA/pole_to_win_conversion_circuits_percentage.csv')
 
+    # create plot
+    #create_race_count_graph(df)
+    create_pole_to_win_graph(df1)
 
 if __name__ == "__main__":
         main()
