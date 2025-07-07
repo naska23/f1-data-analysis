@@ -65,9 +65,9 @@ def create_pole_to_win_graph(df1):
     plt.barh(grand_prix_name, conversion, color='#FF46A2')
 
 
-    plt.xlabel('Pole-to-Win Conversion Percentage', fontsize=14, fontweight='bold', color='white')
-    plt.ylabel('Circuit', fontsize=14, fontweight='bold', color='white')
-    plt.title('Top 10 Circuits by Pole-to-Win Conversion Rate', fontsize=20, fontweight='bold', color='white')
+    plt.xlabel('Pole-to-Win Conversion Percentage', fontsize=12, fontweight='bold', color='white')
+    plt.ylabel('Circuit', fontsize=12, fontweight='bold', color='white')
+    plt.title('Top 10 Circuits by Pole-to-Win Conversion Rate', fontsize=18, fontweight='bold', color='white')
 
     # set ticks color to white
     ax.tick_params(axis='x', colors='white', labelsize=12, width=2, length=6)
